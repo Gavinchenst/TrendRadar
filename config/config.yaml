@@ -122,7 +122,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
   display_mode: "keyword"             # 可选: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
@@ -298,7 +298,7 @@ ai_analysis:
   # - only_analysis: 仅推送 AI 分析结果（若开启了“独立展示区”则一并保留，屏蔽原始热榜/RSS 列表）
   # - both: 两者都推送（分析追加在原始内容后）
   # 注：如果不需要 AI 分析，请将上方 enabled 设为 false，无需使用 push_mode 控制
-  push_mode: "both"
+  push_mode: "only_analysis"
 
   # 分析选项
   max_news_for_analysis: 50         # 参与分析的新闻数量上限（控制成本关键项）
